@@ -12,6 +12,13 @@ export const handlers = [
       })
     )
   }),
+  rest.get('https://my.backend/user', (_req, res, ctx) => {
+    return res(
+      ctx.json({
+        name: "Someone else"
+      })
+    )
+  }),
   rest.get('/reviews', (_req, res, ctx) => {
     return res(
       ctx.json<Review[]>([

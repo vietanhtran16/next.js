@@ -13,6 +13,7 @@ export default function Home({ book }: Props) {
     fetch('/reviews')
       .then((res) => res.json())
       .then(setReviews)
+    fetch("/api/user").then(res => res.json()).then((data) => alert(JSON.stringify(data)))
   }
 
   return (
